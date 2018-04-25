@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-apache2 public/
+web: $(composer config bin-dir)/heroku-apache2 public/
