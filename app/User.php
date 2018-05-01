@@ -28,4 +28,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //gravatar
+    public function gravatar($size = '100')
+    {
+        $grav_url = "https://www.gravatar.com/avatar/" . md5(strtolower(trim($this->attributes['email']))) . "?d=" . urlencode("https://www.somewhere.com/homestar.jpg") . "&s=" . $size;
+        return $grav_url;
+    }
 }
