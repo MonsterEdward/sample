@@ -7,3 +7,5 @@
 		</div>
 	@endif
 @endforeach
+
+{{-- strange new light can be just as frightening as the dark --}}

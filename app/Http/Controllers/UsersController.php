@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 
+use Auth;
+
 class UsersController extends Controller
 {
     public function create()
@@ -15,6 +17,7 @@ class UsersController extends Controller
 
     public function show(User $user)
     {
+        //compact将user数据与视图绑定
     	return view('users.show', compact('user'));
     }
 
@@ -32,6 +35,7 @@ class UsersController extends Controller
     		'password' => bcrypt($request->password)
     	]);
 
+    	Auth::login($user);//使注册成功用户直接登录
     	//提示注册成功信息
     	session()->flash('success', 'Welcome to my site!');
 

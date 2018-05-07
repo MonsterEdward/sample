@@ -19,6 +19,7 @@
 	<div class="container">
 		@yield('content')
 	</div> --}}
+	
 	@include('layouts._header')
 	<div class="container">
 		<div class="col-md-offset-1 col-md-10">
@@ -27,5 +28,7 @@
 			@include('layouts._footer')
 		</div>
 	</div>
+
+	<script src="/js/app.js"></script>{{-- 为什么路径可以这样写? --}}
 </body>
 </html>
