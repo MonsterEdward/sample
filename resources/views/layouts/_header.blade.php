@@ -12,7 +12,7 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ route('users.show', Auth::user()->id) }}">Users' Center</a></li>
-						<li><a href="#">Edit Information</a></li>
+						<li><a href="{{ route('users.edit', Auth::user()->id) }}">Edit Information</a></li>
 						<li class="divider"></li>
 						<li>
 							<a id="logout" href="#">
