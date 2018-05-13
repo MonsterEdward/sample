@@ -4,7 +4,7 @@
 		<nav>
 			<ul class="nav navbar-nav navbar-right">
 				@if (Auth::check())
-				<li><a href="#">Users's list</a></li>
+				<li><a href="{{ route('users.index') }}">Users's list</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						{{ Auth::user()->name }}
