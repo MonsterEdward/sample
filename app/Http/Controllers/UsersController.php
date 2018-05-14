@@ -53,6 +53,8 @@ class UsersController extends Controller
     public function edit(User $user)
     {
         $this->authorize('update', $user);
+        /*$a = Auth::user();
+        var_dump($a);exit;*/
         return view('users.edit', compact('user'));
     }
 
