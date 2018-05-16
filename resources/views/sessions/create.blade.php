@@ -18,7 +18,7 @@
 						Email:	
 					</label>
 					<input type="text" name="email" class="form-control" value="{{ old('email') }}">
-					<lable for="password">Password:</lable>
+					<lable for="password">Password (<a href="{{ route('password.request') }}">Forget your password</a>) :</lable>
 					<input type="password" name="password" class="form-control" value="{{ old('password') }}">
 
 					<div class="checkbox">

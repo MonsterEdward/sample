@@ -25,6 +25,9 @@ $factory->define(App\User::class, function (Faker $faker) {
         //other users is not admin
         'is_admin' => false,
 
+        //activated为true
+        'activated' => true,
+
         'password' => $password ?: $password = bcrypt('111111'),
         'remember_token' => str_random(10),
         'created_at' => $date_time,
