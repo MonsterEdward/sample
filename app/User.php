@@ -52,4 +52,16 @@ class User extends Authenticatable
     {
         $this->notify(new ResetPassword($token));
     }
+
+    //for status
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
+    }
+
+    //不理解,把feed()错写到App\Status model中,所以user()->feed()无法使用
+    public function feed()
+    {
+        return $this->statuses()->orderBy('created_at', 'desc');
+    }
 }
